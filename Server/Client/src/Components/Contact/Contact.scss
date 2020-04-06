@@ -24,6 +24,11 @@
     box-shadow: 0 0 10px grey;
     padding: 20px;
     background: white;
+    margin: auto;
+
+    @media(max-width: 900px){
+      width: 80%
+    }
   }
 
   &__row{
@@ -65,7 +70,7 @@
   &__inputContainer{
     display: flex;
     flex-direction: column;
-    width: 100%
+    width: 50%
   }
 
   &__label{

@@ -8,7 +8,30 @@
   &__firstContainer{
     padding-top: 20vh;
     margin-left: 10%;
-    width: 400px
+    width: 400px;
+
+    @media(max-width: 1200px){
+      margin-top: 40px;
+      width: 60%;
+      background: white;
+      padding: 10px 20px;
+      border: 1px solid lightgray;
+      box-shadow: 0 0 10px lightgray;
+      border-radius: 5px;
+      margin-bottom: 30px;
+      z-index: 100;
+    }
+
+    @media(max-width: 900px){
+      width: 90%;
+    }
+  }
+
+  &__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
   }
 
   &__name{
@@ -29,9 +52,25 @@
     justify-content: flex-end;
   }
 
+  &__imageContainer{
+    z-index: 100;
+    position: absolute;
+    right: -15%;
+  
+    @media (max-width: 1200px) {
+      position: relative;
+      left:0;
+      width: 100%
+    }
+  }
+
   &__computerImage{
     z-index: 100;
-    height: 35vw
+    height: 35vw;
+
+    @media(max-width: 1200px){
+      width: 100%
+    }
   }
 
  &__test{

@@ -21,11 +21,11 @@ export default function Contact(props) {
 
         <div className='contact__formContainer'>
           <div className='contact__row'>
-            <div className='contact__inputContainer'>
+            <div className='contact__inputContainer' style={{paddingRight: 10}}>
               <label for='name' className='contact__label'>Nafn</label>
               <input className='contact__input' type='text' name='name' />
             </div>
-            <div className='contact__inputContainer' style={{ marginLeft: 20 }}>
+            <div className='contact__inputContainer'>
               <label for='email' className='contact__label'>Póstfang</label>
               <input className='contact__input' type='email' name='email' />
             </div>

@@ -21,9 +21,11 @@ export default function Project(props) {
       <div className={`project__slant-${right ? 'right' : 'left'}`} style={{ background: data.backgroundColor }} />
       <div className='project__topContainer'>
         <div className={`project__contentContainer ${right ? 'project__contentContainer--right' : ''}`}>
+       <div className='project__imageContainer'>
           <FadeIn play={play} direction={!right ? 'right' : 'left'} >
             <img alt={data.name} className='project__image' src={process.env.PUBLIC_URL + `/${data.image}`} />
           </FadeIn>
+       </div>
           <div className='project__textContainer'>
             <FadeIn play={play} direction={right? 'right':'left'} delay={0}>
             <h1 className='project__name'  >{data.name}</h1>

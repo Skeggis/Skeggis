@@ -23,6 +23,7 @@ export default function Hero(props) {
   return (
     <div className="hero">
       <div className='hero__test'></div>
+      <div className='hero__wrapper'>
       <div className="hero__firstContainer">
         <FadeIn play={play}>
           <h1 className="hero__name">{data.name}</h1>
@@ -36,7 +37,9 @@ export default function Hero(props) {
           </div>
         </FadeIn>
       </div>
-      <div style={{ zIndex: 100, position: 'absolute', right: '-15%', marginRight: -50 - 0.01 * mouseWidth, top: 50 + 0.01 * mouseHeight, }}>
+      </div>
+
+      <div className='hero__imageContainer' style={{marginRight: -50 - 0.01 * mouseWidth, top: 50 + 0.01 * mouseHeight, }}>
         <FadeIn play={play} direction='left'>
           <img className="hero__computerImage" alt="computer" src={process.env.PUBLIC_URL + '/herocomputer.png'} ></img>
         </FadeIn>
