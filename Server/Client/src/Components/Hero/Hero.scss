@@ -27,6 +27,12 @@
     }
   }
 
+  &__logo{
+    display: flex;
+    justify-content: center;
+  }
+ 
+
   // &__wrapper{
   //   display: flex;
   //   flex-direction: column;
@@ -36,7 +42,8 @@
 
   &__name{
     font-size: 42px;
-    font-family: $titleFont
+    font-family: $titleFont;
+    margin-right: 15px;
   }
 
   &__desc{
@@ -73,6 +80,62 @@
     }
   }
 
+  &__darkGreen{background: #25312f;}
+  &__darkGreenFilter{filter: invert(16%) sepia(32%) saturate(283%) hue-rotate(120deg) brightness(90%) contrast(92%);}
+
+  &__lightMoss{background: #424f35;}
+  &__lightMossFilter{filter: invert(27%) sepia(13%) saturate(955%) hue-rotate(47deg) brightness(98%) contrast(91%);}
+
+  &__blueMan{background: #597387;}
+  &__blueManFilter{filter: invert(43%) sepia(9%) saturate(1279%) hue-rotate(164deg) brightness(97%) contrast(89%);}
+
+  &__golden{background: #958a56;}
+  &__goldenFilter{filter: invert(50%) sepia(39%) saturate(386%) hue-rotate(12deg) brightness(99%) contrast(88%);}
+
+  &__darkBlue{background: #2a4158;}
+  &__darkBlueFilter{filter: invert(22%) sepia(13%) saturate(1728%) hue-rotate(169deg) brightness(94%) contrast(88%);}
+
+  &__crystal{background: #cfd9ce;}
+  &__crystalFilter{filter: invert(89%) sepia(6%) saturate(277%) hue-rotate(67deg) brightness(99%) contrast(87%);}
+
+  &__grayRock{background: #6b7478;}
+  &__grayRockFilter{filter: invert(44%) sepia(15%) saturate(195%) hue-rotate(153deg) brightness(97%) contrast(91%);}
+
+  &__darkRock{background: #414141;}
+  &__darkRockFilter{filter: invert(20%) sepia(7%) saturate(0%) hue-rotate(165deg) brightness(103%) contrast(86%);}
+
+  &__darkSea{background: #384d47;}
+  &__darkSeaFilter{filter: invert(27%) sepia(21%) saturate(405%) hue-rotate(112deg) brightness(97%) contrast(94%);}
+
+  &__whiteCrystal{background: #d9dada;}
+  &__whiteCrystalFilter{filter: invert(100%) sepia(6%) saturate(173%) hue-rotate(131deg) brightness(88%) contrast(93%);}
+
+  &__orangeMat{background: #cf7d08;}
+  &__orangeMatFilter{filter: invert(44%) sepia(99%) saturate(1347%) hue-rotate(13deg) brightness(96%) contrast(94%);}
+
+  &__mtBlanc{background: #a1b5c0;}
+  &__mtBlancFilter{filter: invert(82%) sepia(6%) saturate(697%) hue-rotate(157deg) brightness(87%) contrast(90%);}
+
+  &__sheetWhite{background: #ecf5ed;}
+  &__sheetWhiteFilter{filter: invert(91%) sepia(10%) saturate(311%) hue-rotate(73deg) brightness(111%) contrast(92%);}
+
+  &__ice{background: #d4dfe5;}
+
+  &__bloodOrange{background: #F6511D}
+
+  &__lime{background: #7FB800;}
+
+  &__lemon{background: #FFB400}
+
+  &__logoImg{
+    height: 75px;
+    width: 75px;
+    margin-right: 10px;
+  }
+  &__flexIt{
+    display:flex;
+    align-items: flex-start;
+  }
  &__test{
     content: '';
     position: absolute;
@@ -81,7 +144,7 @@
     width: 100%;
     height: 150vh;
 
-    background: #c334eb;
+    // background: #c334eb;
     -webkit-transform: skewY(-40deg);
     -moz-transform: skewY(-40deg);
     -ms-transform: skewY(-40deg);

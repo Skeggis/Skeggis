@@ -104,7 +104,7 @@ export default [
   {
     id: 6,
     type: 'contact',
-    backgroundColor: '#c334eb',
+    backgroundColor: '#FFB400',
     button: {
       type: 'submit',
       text: 'Senda',
