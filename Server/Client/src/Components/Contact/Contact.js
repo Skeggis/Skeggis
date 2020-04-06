@@ -26,7 +26,7 @@ export default function Contact(props) {
               <input className='contact__input' type='text' name='name' />
             </div>
             <div className='contact__inputContainer' style={{ marginLeft: 20 }}>
-              <label for='email' className='contact__label'>Email</label>
+              <label for='email' className='contact__label'>Póstfang</label>
               <input className='contact__input' type='email' name='email' />
             </div>
 
