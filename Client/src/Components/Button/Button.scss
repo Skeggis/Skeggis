@@ -1,0 +1,54 @@
+@import '../../constants.scss';
+
+.button{
+  background: none;
+  box-shadow: none;
+  font-size: 14px;
+  font-family: $descriptionFont;
+
+  &:focus{
+    outline: none
+  }
+  
+
+
+  &__website{
+    border: 1px solid lightgrey;
+    padding: 13px;
+    border-radius: 5px;
+    transition: 0.3s all ease;
+    &:hover{
+      cursor: pointer;
+      box-shadow: 0px 0px 10px lightgrey;
+    }
+
+    &:active{
+      box-shadow: 0px 0px 3px lightgray;
+    }
+  }
+
+  &__app{
+    border: none;
+    display: flex;
+    align-items: center;
+    box-shadow: none;
+    transition: all 0.3s ease;
+    padding: 10px;
+    border-radius: 5px;
+    &:hover{
+      cursor: pointer;
+      box-shadow: 0px 0px 10px lightgrey;
+    }
+
+    &:active{
+      box-shadow: 0px 0px 3px lightgray;
+    }
+  }
+
+  &__arrow{
+    height: 20px;
+    margin-left: 5px;
+    transition: all 0.3s ease;
+  }
+  
+}

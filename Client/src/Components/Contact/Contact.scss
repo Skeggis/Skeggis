@@ -1,0 +1,120 @@
+@import '../../constants.scss';
+
+.contact{
+  height: 100%;
+  background: white;
+  
+
+  &__topContainer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__formContainer{
+    width: 500px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    box-shadow: 0 0 10px grey;
+    padding: 20px;
+    background: white;
+  }
+
+  &__row{
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  &__textarea{
+    resize: none;
+  }
+
+  &__buttonContainer{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+
+  &__input{
+    box-shadow: none;
+    padding: 10px 5px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    box-shadow: none;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    font-family: $descriptionFont;
+    padding-left: 10px;
+
+    &:focus{
+      box-shadow: 0 0 10px lightgray;
+      outline: none;
+    }
+    &:hover{
+      box-shadow:  0 0 10px lightgray;
+    }
+  }
+
+
+  &__inputContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%
+  }
+
+  &__label{
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-family: $descriptionFont;
+  }
+
+  &__textArea{
+    width: 100%
+  }
+
+  &__textAreaContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%
+  }
+
+  &__slant-left{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -100vh;
+    width: 100%;
+    height: 150vh;
+    -webkit-transform: skewY(40deg);
+    -moz-transform: skewY(40deg);
+    -ms-transform: skewY(40deg);
+    -o-transform: skewY(40deg);
+    transform: skewY(40deg);
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 1px 1px 10px grey;
+  }
+
+  &__slant-right{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -100vh;
+    width: 100%;
+    height: 150vh;
+    -webkit-transform: skewY(-40deg);
+    -moz-transform: skewY(-40deg);
+    -ms-transform: skewY(-40deg);
+    -o-transform: skewY(-40deg);
+    transform: skewY(-40deg);
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 1px 1px 10px grey;
+  }
+}
