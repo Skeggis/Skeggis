@@ -6,6 +6,9 @@ export default function Button(props) {
     type,
     url
   } = props.buttonData
+  const {
+    onPressed
+  } = props
 
   if (type === 'website') {
     return (
@@ -28,7 +31,8 @@ export default function Button(props) {
     )
   } else if (type === 'submit') {
     return (
-      <button className='button button__website'>
+      <button className='button button__website' onClick={() => { 
+        if(onPressed){onPressed()}} }>
         {props.children}
       </button>
     )
