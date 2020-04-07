@@ -19,6 +19,7 @@ export default function Hero(props) {
     window.addEventListener('mousemove', (e) => { setMouseHeight(e.clientY); setMouseWidth(e.clientX) })
 
   }, [])
+  console.log(process.env.REACT_APP_PUBLIC_URL)
 
   const play = currentIndex === myIndex
 //Skegg: darkRock eða grayRock
@@ -51,10 +52,10 @@ export default function Hero(props) {
           <h1 className="hero__name">{data.name}</h1>
           <div className="hero__logo" >
             <div className="" >
-              <img className={"hero__logoImg" + filter} src={process.env.PUBLIC_URL + `/blackPerson2.png`} ></img>
+              <img className={"hero__logoImg" + filter} src={process.env.REACT_APP_PUBLIC_URL + `/blackPerson2.png`} ></img>
             </div>
             <div className="" >
-              <img className={"hero__logoImg" + filter} src={process.env.PUBLIC_URL + `/blackPerson1.png`}></img>
+              <img className={"hero__logoImg" + filter} src={process.env.REACT_APP_PUBLIC_URL + `/blackPerson1.png`}></img>
             </div>
           </div>
           </div>

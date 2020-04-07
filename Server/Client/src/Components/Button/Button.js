@@ -17,7 +17,7 @@ export default function Button(props) {
     return (
       <button className='button button__app'>
         {props.children}
-        <img className='button__arrow' alt='arrow' src={process.env.PUBLIC_URL + '/arrow.png'} />
+        <img className='button__arrow' alt='arrow' src={process.env.REACT_APP_PUBLIC_URL + '/arrow.png'} />
       </button>
     )
   } else if (type === 'hero') {
