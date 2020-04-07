@@ -15,7 +15,7 @@ export default [
     type: 'project',
     image: 'ispan.png',
     name: 'Íspan',
-    description: 'Lorem is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard',
+    description: 'Íspan er leiðandi fyrirtæki í sölu og framleiðslu glera og spegla. Fyrirtækið býður upp á sérsmíði sem hægt er að panta í gegnum pöntunarkerfi',
     pointers: [
       'asdf',
       'asdf'
@@ -24,8 +24,8 @@ export default [
     recommendation: {
       name: 'Einar þór Harðarsson',
       position: 'Framkvæmdarstjóri Íspan',
-      text: 'Flottir strákar',
-      image: ''
+      text: 'Ég mæli hiklaust með þau hjá Skeggis. Vefsíðan mín kom vel út og þau gátu gert allt sem ég gat ímyndað mér',
+      image: 'Einar.jpg'
     },
     buttons: [
       {
@@ -33,6 +33,10 @@ export default [
         url: 'ispan.is',
         text: 'Skoða vefsíðu'
       }
+    ],
+    bullets:[
+      'Vefsíða',
+      'Pöntunarkerfi'
     ]
   },
   {
@@ -41,7 +45,7 @@ export default [
     name: 'LivePoints',
     image: 'livepoints.png',
     backgroundColor: '#3F51B5',
-    description: 'Lorem is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard',
+    description: 'Livepoints er hugbúnaðarlausn fyrir að halda utan um og birta í rauntíma stöðu badmintonleikja. Lausnin hefur verið notað á stórmótum á Íslandi',
     buttons: [
       {
         id: 1,
@@ -61,14 +65,25 @@ export default [
         url: 'livepoints.net',
         text: 'Skoða vefsíðu'
       },
-    ]
+    ],
+    bullets: [
+      'Vefsíða',
+      'Android/iOS app',
+      'Rauntíma niðurstöður'
+    ],
+    recommendation: {
+      text: 'asdf sadf asdælkf jasædlfk aælsd jfælsadk jfæaslkd jfælsakdj fælaskjd f',
+      name: 'Einar Þór Harðarsson',
+      image: 'Einar.jpg',
+      position: 'framkvæmdarstjóri íspan'
+    }
   },
   {
     id: 4,
     type: 'project',
     name: 'Vrúmm',
     image: 'vrumm.png',
-    description: 'Lorem is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard',
+    description: 'Vrúmm er vettvangur fyrir fólk sem vill kaupa eða selja bíla. Þar geta notendur sett upp auglýsingu fyrir bíl eða leitað að draumabílnum sínum',
     buttons: [
       {
         id: 1,
@@ -83,6 +98,10 @@ export default [
         url: ''
       }
     ],
+    bullets: [
+      'Android/iOS app',
+      'Rauntíma spjallkerfi'
+    ],
     backgroundColor: '#76B26B'
   },
   {
@@ -90,7 +109,7 @@ export default [
     type: 'project',
     name: 'ChiroTix',
     image: 'chirotix.png',
-    description: 'Lorem is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard',
+    description: 'Chirotix er miðasala á viðburði fyrir kírópraktora. Viðburðahaldarar geta sett upp viðburð og kerfið sér um sölu miðanna.',
     buttons: [
       {
         id: 1,
@@ -99,7 +118,11 @@ export default [
         url: ''
       }
     ],
-    backgroundColor: '#169fe6'
+    backgroundColor: '#169fe6',
+    bullets: [
+      'Vefsíða',
+      'Miðasala'
+    ]
   },
   {
     id: 6,
