@@ -26,8 +26,9 @@
     }
 
     @media(max-width: 900px){
-      width: 90%;
-      z-index: 10000;
+      width: 85%;
+      margin-left: 10px;
+      margin-right: 10px;
 
     }
   }
@@ -95,11 +96,7 @@
     height: 35vw;
 
     @media(max-width: 1200px){
-      height: 50vw
-    }
-
-    @media(max-width: 1200px){
-      height: 60vw;
+      height: 70vw;
     }
   }
 
