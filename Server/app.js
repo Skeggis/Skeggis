@@ -32,11 +32,13 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'Client/build')));
 
 
+app.use('/api',indexRouter);
+
+
 app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'Client/build', 'index.html'));
 });
 
-app.use('/',indexRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

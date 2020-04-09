@@ -40,7 +40,7 @@ function Contact(props) {
     }
 
     try {
-      let response = await axios.post(process.env.REACT_APP_PUBLIC_URL + '/contact', {
+      let response = await axios.post(process.env.REACT_APP_PUBLIC_URL + '/api/contact', {
         name: info.name,
         email: info.email,
         subject: info.subject
