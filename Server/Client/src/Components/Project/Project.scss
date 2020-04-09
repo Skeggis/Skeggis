@@ -1,12 +1,11 @@
-@import '../../constants.scss';
+@import "../../constants.scss";
 
-.project{
+.project {
   height: 100%;
   background: white;
   overflow: hidden;
 
-
-  &__topContainer{
+  &__topContainer {
     position: absolute;
     left: 0;
     right: 0;
@@ -15,16 +14,16 @@
     z-index: 10;
   }
 
-  &__contentContainer{
+  &__contentContainer {
     width: 100%;
     height: 100%;
     padding-top: 20vh;
     display: flex;
     justify-content: center;
 
-    &--right{
+    &--right {
       flex-direction: row-reverse;
-      @media(max-width: 1200px){
+      @media (max-width: 1200px) {
         flex-direction: column;
         align-items: center;
         padding-top: 40px;
@@ -32,51 +31,52 @@
       }
     }
 
-    @media(max-width: 1200px){
+    @media (max-width: 1200px) {
       flex-direction: column-reverse;
       align-items: center;
       padding-top: 40px;
       justify-content: flex-end;
-
     }
   }
 
-  &__imageContainer{
+  &__imageContainer {
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    @media(max-width: 1200px){
+    @media (max-width: 1200px) {
       width: 100%;
     }
   }
 
-  &__image{
-     width: 100%;
+  &__image {
+    width: 100%;
 
-    @media(max-width: 1200px){
-      height: 70vw
+    @media (max-width: 1200px) {
+      height: 70vw;
     }
   }
 
+  &__hiddenContainer {
+    overflow: hidden;
+  }
 
-
-  &__name{
+  &__name {
     font-size: 42px;
     font-family: $titleFont;
 
-    @media(max-width: 1200px){
+    @media (max-width: 1200px) {
       margin-top: 0px;
     }
   }
 
-  &__textContainer{
+  &__textContainer {
     width: 400px;
     line-height: 1.5;
     font-family: $descriptionFont;
 
-    @media(max-width: 1200px){
+    @media (max-width: 1200px) {
       width: 60%;
       background: white;
       padding: 10px 20px;
@@ -86,37 +86,39 @@
       margin-bottom: 30px;
     }
 
-    @media(max-width: 900px){
+    @media (max-width: 900px) {
       width: 85%;
       margin-left: 20px;
       margin-right: 20px;
     }
   }
-  
-  &__buttonContainer{
+
+  &__buttonContainer {
     margin-top: 10px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    overflow: hidden;
   }
 
-  &__buttonWrapper{
+  &__buttonWrapper {
     margin-left: 20px;
   }
 
-  &__bulletsContainer{
+  &__bulletsContainer {
     margin-top: 30px;
     margin-bottom: 0px;
+    overflow: hidden;
   }
 
-  &__bullet{
+  &__bullet {
     // font-size: 18px;
-    & span{
+    & span {
       font-size: 18px;
     }
   }
 
-  &__medmaeli{
+  &__medmaeli {
     display: flex;
     padding: 10px;
     border-radius: 5px;
@@ -125,33 +127,31 @@
     border: 0px solid white;
     overflow: hidden;
     max-width: 80%;
-    
-    
 
     // &--hover{
-      border: 1px solid lightgrey;
-      background: white;
+    border: 1px solid lightgrey;
+    background: white;
     // }
   }
 
-  &__medmaeliTextContainer{
+  &__medmaeliTextContainer {
     width: 0%;
     white-space: nowrap;
     display: none;
     transition: all 0.3s ease;
 
-    &--hover{
+    &--hover {
       width: 100%;
       display: inline-block;
     }
   }
 
-  &__medmaeliMynd{
+  &__medmaeliMynd {
     border-radius: 50%;
     height: 100px;
   }
 
-  &__medmaeliTexti{
+  &__medmaeliTexti {
     font-family: $descriptionFont;
     font-style: italic;
     transition: all 0.3s ease;
@@ -159,20 +159,20 @@
     opacity: 0;
     // width: 0%;
 
-    &--hover{
+    &--hover {
       display: inline-block;
       opacity: 1;
     }
   }
 
-  &__medmaeliNafn{
+  &__medmaeliNafn {
     font-family: $descriptionFont;
     text-align: end;
     font-size: 14px;
   }
 
-  &__slant-left{
-    content: '';
+  &__slant-left {
+    content: "";
     position: absolute;
     right: 0;
     bottom: -100vh;
@@ -188,8 +188,8 @@
     box-shadow: 1px 1px 10px grey;
   }
 
-  &__slant-right{
-    content: '';
+  &__slant-right {
+    content: "";
     position: absolute;
     right: 0;
     bottom: -100vh;
@@ -205,4 +205,3 @@
     box-shadow: 1px 1px 10px grey;
   }
 }
-

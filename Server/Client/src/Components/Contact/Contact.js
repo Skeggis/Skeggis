@@ -3,13 +3,15 @@ import Button from '../Button/Button'
 import './Contact.scss'
 import FadeIn from '../FadeIn/FadeIn';
 import axios from 'axios';
+import { withSnackbar } from 'notistack';
 
 
-export default function Contact(props) {
+function Contact(props) {
   const {
     data,
     currentIndex,
-    myIndex
+    myIndex,
+    enqueueSnackbar
   } = props
 
   const [info, setInfo] = useState({
@@ -18,12 +20,24 @@ export default function Contact(props) {
     subject: ''
   });
 
+  function showMessage(message, variant){
+    enqueueSnackbar(message, {variant})
+  }
+
   var handleSubmit = async (event) => {
     event.preventDefault()
-    //TODO: show some type of error message.
-    if (info.name.length === 0) { return }
-    if (info.email.length === 0) { return }
-    if (info.subject.length === 0) { return }
+    if (info.name.length === 0) { 
+      showMessage('Sláðu inn nafn.', 'error')
+      return
+    }
+    if (info.email.length === 0) { 
+      showMessage('Sláðu inn póstfang.', 'error')
+      return
+    }
+    if (info.subject.length === 0) {
+      showMessage('Sláðu inn fyrirspurn.', 'error')
+      return
+    }
 
     try {
       let response = await axios.post(process.env.REACT_APP_PUBLIC_URL + '/contact', {
@@ -34,19 +48,22 @@ export default function Contact(props) {
 
         const data = response.data
         if (data.success) {
-          const messageToUser = data.message
-          //TODO: Show success message
+          showMessage(data.message, 'success')
         } else if (data.errors) {
-          //TODO: Show errors array
+          data.errors.forEach(error => {
+            showMessage(error, 'error')
+          });
         } else {
-          //TODO: Show error when no messages sent from server
+          showMessage('Eitthvað fór úrskeiðis. Reyndu aftur.', 'error')
         }
     } catch (error) {
       if(error.response){
-        var errorMessages = error.response.data.errors //array of strings
-        //TODO: show our error
+        const errorMessages = error.response.data.errors
+        errorMessages.forEach(error => {
+          showMessage(error, 'error')
+        })
       } else {
-        //TODO: show error not from our server
+        showMessage('Eitthvað fór úrskeiðis. Reyndu aftur.', 'error')
       }
     }
     
@@ -70,17 +87,17 @@ export default function Contact(props) {
             <div className='contact__formContainer'>
               <div className='contact__row'>
                 <div className='contact__inputContainer' style={{ paddingRight: 10 }}>
-                  <label for='name' className='contact__label'>Nafn</label>
+                  <label htmlFor='name' className='contact__label'>Nafn</label>
                   <input className='contact__input' type='text' name='name' onChange={handleChange} required/>
                 </div>
                 <div className='contact__inputContainer'>
-                  <label for='email' className='contact__label'>Póstfang</label>
+                  <label htmlFor='email' className='contact__label'>Póstfang</label>
                   <input className='contact__input' type='email' name='email' onChange={handleChange} required/>
                 </div>
 
               </div>
               <div className='contact__textAreaContainer'>
-                <label className='contact__label' for='subject'>Fyrirspurn</label>
+                <label className='contact__label' htmlFor='subject'>Fyrirspurn</label>
                 <textarea className='contact__input contact__textarea' name='subject' rows={5} onChange={handleChange} required/>
               </div>
               <div className='contact__buttonContainer'>
@@ -94,3 +111,5 @@ export default function Contact(props) {
     </div>
   )
 }
+
+export default withSnackbar(Contact);

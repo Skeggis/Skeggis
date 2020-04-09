@@ -24,14 +24,14 @@ async function contactUs(req,res){
   // Finds the validation errors in this request and wraps them in an object with handy functions
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
-    return res.status(422).json({ errors: errors.array() });
+    return res.status(422).json({ errors: errors.array().map(i => i.msg) });
   }
 
   let response = await insertContactUs({name, email, subject})
 
   if(!response){res.status(400).json({errors: ['Could not save the question.']})}
 
-  res.status(200).json({success:true, message:"Við munum fara yfir spurninguna þína og svara eins fljótt og auðið er. Takk fyrir."})
+  res.status(200).json({success:true, message:"Fyrirspurn móttekin. Við munum svara eins fljótt og auðið er."})
 
   //TODO: Put onto a worker node.
   notifyUs({name, email, subject})

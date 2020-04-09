@@ -44,20 +44,24 @@ export default function Project(props) {
             )} */}
           </div>
           <div className='project__textContainer'>
-            <FadeIn play={play} direction={right ? 'right' : 'left'} delay={0}>
-              <h1 className='project__name'  >{data.name}</h1>
-            </FadeIn>
+            <div className='project__hiddenContainer'>
+              <FadeIn play={play} direction={right ? 'right' : 'left'} delay={0}>
+                <h1 className='project__name'  >{data.name}</h1>
+              </FadeIn>
+            </div>
 
             {data.description && (
-              <FadeIn play={play} direction={right ? 'right' : 'left'} delay={0.1}>
-                <p style={{ marginBottom: 0 }} >{data.description}</p>
-              </FadeIn>
+              <div className='project__hiddenContainer'>
+                <FadeIn play={play} direction={right ? 'right' : 'left'} delay={0.1}>
+                  <p style={{ marginBottom: 0 }} >{data.description}</p>
+                </FadeIn>
+              </div>
             )}
 
             {data.bullets && (
               <ul className='project__bulletsContainer'>
                 {data.bullets.map((bullet, i) => (
-                  <FadeIn play={play} direction={right ? 'right' : 'left'} delay={0.15 + i * 0.05}>
+                  <FadeIn key={i} play={play} direction={right ? 'right' : 'left'} delay={0.15 + i * 0.05}>
                     <li className='project__bullet'>
                       <span>
                         {bullet}
@@ -72,7 +76,7 @@ export default function Project(props) {
 
             <div className='project__buttonContainer'>
               {data.buttons.map((button, i) => (
-                <FadeIn play={play} direction={right ? 'right' : 'left'} delay={0.2 + (data.buttons.length - i) * 0.08}>
+                <FadeIn key={button.id} play={play} direction={right ? 'right' : 'left'} delay={0.2 + (data.buttons.length - i) * 0.08}>
                   <div className='project__buttonWrapper'>
                     <Button className='project__button' buttonData={button}>{button.text}</Button>
                   </div>

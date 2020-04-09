@@ -12,14 +12,6 @@ export default function Hero(props) {
     myIndex
   } = props
 
-  const [mouseHeight, setMouseHeight] = useState(0)
-  const [mouseWidth, setMouseWidth] = useState(0)
-
-  useEffect(() => {
-    window.addEventListener('mousemove', (e) => { setMouseHeight(e.clientY); setMouseWidth(e.clientX) })
-
-  }, [])
-  console.log(process.env.PUBLIC_URL)
 
   const play = currentIndex === myIndex
   //Skegg: darkRock eða grayRock
