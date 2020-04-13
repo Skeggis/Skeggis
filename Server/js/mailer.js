@@ -29,7 +29,7 @@ async function notifyUs({name, email, subject}){
   let transporter = nodemailer.createTransport(config.mailserver);
 
   const mail = {
-    from: 'noreply@skeggis.is',
+    from: process.env.SKEGGIS_EMAIL,
     to: maillist,
     cc:maillist,
     subject: 'Ný fyrirspurn, get on it SKEGGI!',
