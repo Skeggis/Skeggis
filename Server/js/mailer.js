@@ -6,12 +6,12 @@ const SKEGGIS_EMAIL = process.env.SKEGGIS_EMAIL
 const nodemailer = require('nodemailer');
 const config = {
   mailserver: {
-    host: 'smtp.ethereal.email',
-    port: 587,
-    secure: false,
+    host: process.env.EMAIL_HOST,
+    port: process.env.EMAIL_PORT,
+    secure: process.env.SECURE_MAILING === 'true'?true:false,
     auth: {
-      user: 'carroll.erdman@ethereal.email',
-      pass: 'y2jnQMBHpMacRdkAM9'
+      user: process.env.SKEGGIS_MAIL_USER,
+      pass: process.env.SKEGGIS_MAIL_PASS
     }
   },
 
