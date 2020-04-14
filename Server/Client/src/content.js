@@ -113,8 +113,8 @@ export default [
     buttons: [
       {
         id: 1,
-        type: 'website',
-        text: 'Skoða vefsíðu',
+        type: 'inprogress',
+        text: 'Í þróun',
         url: ''
       }
     ],

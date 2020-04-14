@@ -13,7 +13,7 @@ export default function Pages(props){
     index
   } = props
 
-  console.log(state)
+  console.log(fullpageApi)
 
   let pages = []
   Content.forEach((data, i)=> {

@@ -13,6 +13,11 @@ export default function Button(props) {
     fullpageApi
   } = props
 
+  function toBottom(){
+    //Todo: find the actual bottom
+    fullpageApi.moveTo(6)
+  }
+
   if (type === 'website') {
     return (
       <a href={url} target='_blank'>
@@ -21,6 +26,12 @@ export default function Button(props) {
         </button>
       </a>
 
+    )
+  } else if(type === 'inprogress'){
+    return(
+      <button className='button button__inProgress'>
+        {props.children}
+      </button>
     )
   } else if (type === 'app') {
     return (
@@ -33,7 +44,7 @@ export default function Button(props) {
     )
   } else if (type === 'hero') {
     return (
-      <button className='button button__website' onClick={fullpageApi.moveTo('contact-anchor')}>
+      <button className='button button__website' onClick={fullpageApi? toBottom: ()=>{}}>
         {props.children}
       </button>
     )
