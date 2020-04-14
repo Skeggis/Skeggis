@@ -50,7 +50,7 @@ export default [
       {
         id: 1,
         type: 'app',
-        url: '',
+        url: 'https://play.google.com/store/apps/details?id=net.livepoints.livepoints&hl=en',
         text: 'Android'
       },
       {
@@ -89,7 +89,7 @@ export default [
         id: 1,
         type: 'app',
         text: 'Android',
-        url: ''
+        url: 'https://play.google.com/store/apps/details?id=is.davidpxn.projectcar&hl=en'
       },
       {
         id: 2,

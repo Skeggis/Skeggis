@@ -20,12 +20,18 @@ function Contact(props) {
     subject: ''
   });
 
+  const [loading, setLoading] = useState(false)
+
   function showMessage(message, variant){
     enqueueSnackbar(message, {variant})
   }
 
   var handleSubmit = async (event) => {
     event.preventDefault()
+    if(loading){
+      return
+    }
+    setLoading(true)
     if (info.name.length === 0) { 
       showMessage('Sláðu inn nafn.', 'error')
       return
@@ -65,6 +71,8 @@ function Contact(props) {
       } else {
         showMessage('Eitthvað fór úrskeiðis. Reyndu aftur.', 'error')
       }
+    } finally{
+      setLoading(false)
     }
     
   }
@@ -101,7 +109,7 @@ function Contact(props) {
                 <textarea className='contact__input contact__textarea' name='subject' rows={5} onChange={handleChange} required/>
               </div>
               <div className='contact__buttonContainer'>
-                <Button buttonData={data.button}>{data.button.text}</Button>
+                <Button loading={loading} buttonData={data.button}>{data.button.text}</Button>
               </div>
             </div>
           </form>

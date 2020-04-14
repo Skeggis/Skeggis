@@ -12,17 +12,18 @@ export default function App() {
 
   return (
     <ReactFullpage
-    licenseKey = {'YOUR_KEY_HERE'}
+    licenseKey = {process.env.FULLPAGE_LICENSE}
     scrollingSpeed = {1000} 
     navigation={true}
     onLeave={afterLoad}
 
-    render={({ state, fullpageApi }) => {
+    render={(test) => {
+      console.log(test)
       return (
         <ReactFullpage.Wrapper>
           <Pages
-            fullpageApi={fullpageApi}
-            state={state}
+            fullpageApi={test.fullpageApi}
+            state={test.state}
             index={index}
           />
         </ReactFullpage.Wrapper>

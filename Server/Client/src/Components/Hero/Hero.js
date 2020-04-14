@@ -9,7 +9,8 @@ export default function Hero(props) {
   const {
     data,
     currentIndex,
-    myIndex
+    myIndex,
+    fullpageApi
   } = props
 
 
@@ -57,7 +58,7 @@ export default function Hero(props) {
           </FadeIn>
           <FadeIn play={play} delay={0.1}>
             <div className='hero__buttonContainer' >
-              <Button buttonData={data.button} >{data.button.text}</Button>
+              <Button buttonData={data.button} fullpageApi={fullpageApi} >{data.button.text}</Button>
             </div>
           </FadeIn>
         </div>

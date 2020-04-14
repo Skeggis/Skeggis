@@ -21,7 +21,7 @@ export default function Pages(props){
     if(data.type==='hero'){
       pages.push((
         <Page key={data.id}>
-          <Hero data={data} currentIndex={index} myIndex={i}/>
+          <Hero data={data} currentIndex={index} myIndex={i} fullpageApi={fullpageApi}/>
         </Page>
       ))
     } else if (data.type === 'project'){
@@ -39,7 +39,7 @@ export default function Pages(props){
       ))
     } else if (data.type === 'contact'){
       pages.push((
-        <Page key={data.id}>
+        <Page key={data.id} anchor='contact-anchor'>
           <Contact data={data} currentIndex={index} myIndex={i}/>
         </Page>
       ))
