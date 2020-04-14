@@ -62,7 +62,7 @@ export default [
       {
         id: 3,
         type: 'website',
-        url: 'https://livepoints.net',
+        url: 'http://livepoints.net',
         text: 'Skoða vefsíðu'
       },
     ],
