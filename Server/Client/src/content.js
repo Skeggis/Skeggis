@@ -56,7 +56,7 @@ export default [
       {
         id: 2,
         type: 'app',
-        url: '',
+        url: 'https://apps.apple.com/is/app/live-points/id1485862857',
         text: 'iOS'
       },
       {
@@ -95,7 +95,7 @@ export default [
         id: 2,
         type: 'app',
         text: 'iOS',
-        url: ''
+        url: 'https://apps.apple.com/is/app/vrúmm-bílaapp/id1450758357'
       }
     ],
     bullets: [
