@@ -39,7 +39,7 @@ export default function Pages(props){
       ))
     } else if (data.type === 'contact'){
       pages.push((
-        <Page key={data.id} anchor='contact-anchor'>
+        <Page key={data.id}>
           <Contact data={data} currentIndex={index} myIndex={i}/>
         </Page>
       ))
