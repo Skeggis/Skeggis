@@ -30,7 +30,7 @@ export default [
     buttons: [
       {
         type: 'website',
-        url: 'ispan.is',
+        url: 'https://ispan.is',
         text: 'Skoða vefsíðu'
       }
     ],
@@ -62,7 +62,7 @@ export default [
       {
         id: 3,
         type: 'website',
-        url: 'livepoints.net',
+        url: 'https://livepoints.net',
         text: 'Skoða vefsíðu'
       },
     ],
