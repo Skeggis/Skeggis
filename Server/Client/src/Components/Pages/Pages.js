@@ -13,11 +13,9 @@ export default function Pages(props){
     index
   } = props
 
-  console.log(fullpageApi)
 
   let pages = []
   Content.forEach((data, i)=> {
-    console.log(data.type)
     if(data.type==='hero'){
       pages.push((
         <Page key={data.id}>
@@ -25,7 +23,6 @@ export default function Pages(props){
         </Page>
       ))
     } else if (data.type === 'project'){
-      console.log('her')
       pages.push((
         <Page key={data.id}>
           <Project data={data} fullpageApi={fullpageApi} currentIndex={index} myIndex={i}/>

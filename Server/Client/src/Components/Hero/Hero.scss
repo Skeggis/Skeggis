@@ -23,7 +23,7 @@
       margin-bottom: 30px;
       margin-left: 0;
       z-index: 10000;
-    overflow: hidden;
+    //overflow: hidden;
 
     }
 
@@ -40,6 +40,9 @@
     justify-content: center;
   }
  
+  &__hiddenContainer{
+    overflow: hidden;
+  }
 
   &__wrapper{
     // display: flex;
@@ -82,7 +85,7 @@
     z-index: 100;
     position: absolute;
     right: -15%;
-    top: 20vh;
+    top: 15vh;
   
     @media (max-width: 1200px) {
       width: 90%;

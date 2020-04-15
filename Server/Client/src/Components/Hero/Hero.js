@@ -39,6 +39,8 @@ export default function Hero(props) {
       <div className={'hero__test' + backCol}></div>
       <div className='hero__wrapper'>
         <div className="hero__firstContainer">
+
+          <div className='hero__hiddenContainer'>
           <FadeIn play={play}>
             <div className="hero__flexIt">
               <h1 className="hero__name">{data.name}</h1>
@@ -51,24 +53,30 @@ export default function Hero(props) {
                 </div>
               </div>
             </div>
+          </FadeIn>
+          </div>
 
-          </FadeIn>
-          <FadeIn play={play} delay={0.05}>
-            <p className="hero__desc">{data.description}</p>
-          </FadeIn>
-          <FadeIn play={play} delay={0.1}>
-            <div className='hero__buttonContainer' >
-              <Button buttonData={data.button} fullpageApi={fullpageApi} >{data.button.text}</Button>
-            </div>
-          </FadeIn>
+          <div className='hero__hiddenContainer'>
+            <FadeIn play={play} delay={0.05}>
+              <p className="hero__desc">{data.description}</p>
+            </FadeIn>
+          </div>
+          <div className='hero__hiddenContainer'>
+            <FadeIn play={play} delay={0.1}>
+              <div className='hero__buttonContainer' >
+                <Button buttonData={data.button} fullpageApi={fullpageApi} >{data.button.text}</Button>
+              </div>
+            </FadeIn>
+          </div>
         </div>
 
-      <div className='hero__imageContainer'>
-        <FadeIn play={play} direction='left'>
-          <img className="hero__computerImage" alt="computer" src={process.env.PUBLIC_URL + '/herocomputer.png'} ></img>
-        </FadeIn>
+        <div className='hero__imageContainer'>
+          <FadeIn play={play} direction='left'>
+            <img className="hero__computerImage" alt="computer" src={process.env.PUBLIC_URL + '/herocomputer.png'} ></img>
+          </FadeIn>
+        </div>
       </div>
+
     </div>
-      </div>
   )
 }
